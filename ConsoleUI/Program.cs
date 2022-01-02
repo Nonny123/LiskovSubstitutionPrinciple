@@ -13,18 +13,28 @@ namespace ConsoleUI
         {
             IManager accountingVP = new Manager();
 
-            accountingVP.FirstName = "Emma";
-            accountingVP.LastName = "Stone";
+            accountingVP.FirstName = "Gbenga";
+            accountingVP.LastName = "Olushola";
             accountingVP.CalculatePerHourRate(4);
 
-            IManaged emp = new Manager();
+            IManaged emp = new Employee();
 
-            emp.FirstName = "Tim";
-            emp.LastName = "Corey";
+            emp.FirstName = "Emeka";
+            emp.LastName = "Obi";
             emp.AssignManager(accountingVP);
             emp.CalculatePerHourRate(2);
 
+            IManager ceo = new CEO();
+            ceo.FirstName = "Bill";
+            ceo.LastName = "Gate";
+            ceo.CalculatePerHourRate(2);
+
+            IManaged ceo2 = new Manager();
+
             Console.WriteLine($"{ emp.FirstName }'s salary is ${ emp.Salary }/hour.");
+            Console.WriteLine($"{ ceo.FirstName }'s salary is ${ ceo.Salary }/hour.");
+            ceo.GeneratePerformanceReview();
+
 
             Console.ReadLine();
         }

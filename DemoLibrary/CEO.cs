@@ -18,7 +18,7 @@ namespace DemoLibrary
         public void GeneratePerformanceReview()
         {
             // Simulate reviewing a direct report
-            Console.WriteLine("I'm reviewing a direct report's performance.");
+            Console.WriteLine("I'm reviewing a direct report's performance says CEO");
         }
 
         public void FireSomeone()
